@@ -7,4 +7,5 @@ TODO:
 * Investigate user interface wrappers around the code review process to simplify the user  experience
 * Investigate Reviewable - setup a tmp repo (DHFPlayground) and use Reviewable to review and approve a PR
 * Test webhook integration with ngrok and local Flask app
+* Try different workflows focused on simplicity
 
