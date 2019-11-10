@@ -1,0 +1,12 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - printenv
+  build:
+    commands:
+      - echo building the project
+  post_build:
+    commands:
+      - echo post build phase
