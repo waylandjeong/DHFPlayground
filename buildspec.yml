@@ -24,7 +24,7 @@ phases:
       - pandoc -s -o README.doc README.md
       - git add README.doc
       - git commit -m "Converted markdown to doc using pandoc"
-      - git push -u origin master https://waylandjeong:$GITHUB_PAT@github.com/waylandjeong/DHFPlayground.git
+      - git push -u origin master
   post_build:
     commands:
       - echo post build phase
