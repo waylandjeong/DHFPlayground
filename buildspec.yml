@@ -9,7 +9,6 @@ phases:
     runtime-versions:
       python: 3.7    
     commands:
-      - printenv
       - apt-get update -y
       - apt-get install -y pandoc
       - pandoc --version
