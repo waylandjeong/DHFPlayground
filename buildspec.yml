@@ -12,6 +12,7 @@ phases:
     commands:
       - echo building the project
       - git remote -v
+      - pandoc -s -o README.doc README.md
   post_build:
     commands:
       - echo post build phase
