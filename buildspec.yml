@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.7    
     commands:
-      - sudo apt-get update && sudo apt-get install pandoc
+      - apt-get update && apt-get install pandoc
       - pandoc --version
   build:
     commands:
