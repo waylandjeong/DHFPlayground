@@ -11,10 +11,6 @@ phases:
   build:
     commands:
       - echo building the project
-      - git config --global user.email "wjeong@gmail.com"   
-      - git config --global user.name "Wayland Jeong"   
-      - git config --global credential.helper '!aws codecommit credential-helper $@'
-      - git config --global credential.UseHttpPath true
       - git remote -v
       - pandoc -s -o README.doc README.md
       - git add README.doc
