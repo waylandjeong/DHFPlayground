@@ -13,6 +13,9 @@ phases:
       - echo building the project
       - git config --global user.email "wjeong@gmai.com"
       - git config --global user.name "Wayland Jeong" 
+      - git help -a | grep credential-
+      - GITHELPER=`git help -a | grep credential- | head -n1 | awk '{print $1;}'`
+      - git help ${GITHELPER}
       - git remote -v
       - pandoc -s -o README.doc README.md
       - git add README.doc
