@@ -1,10 +1,15 @@
 version: 0.2
 
+env:
+  parameter-store:
+    GITHUB_PAT: "GithubPersonalAccessToken"
+    
 phases:
   install:
     runtime-versions:
       python: 3.7    
     commands:
+      - printenv
       - apt-get update -y
       - apt-get install -y pandoc
       - pandoc --version
@@ -12,10 +17,7 @@ phases:
     commands:
       - echo building the project
       - git config --global user.email "wjeong@gmai.com"
-      - git config --global user.name "Wayland Jeong" 
-      - git help -a | grep credential-
-      - GITHELPER=`git help -a | grep credential- | head -n1 | awk '{print $1;}'`
-      - git help ${GITHELPER}
+      - git config --global user.name "Wayland Jeong"
       - git remote -v
       - pandoc -s -o README.doc README.md
       - git add README.doc
