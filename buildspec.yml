@@ -9,6 +9,7 @@ phases:
   build:
     commands:
       - echo building the project
+      - git remote -v
   post_build:
     commands:
       - echo post build phase
