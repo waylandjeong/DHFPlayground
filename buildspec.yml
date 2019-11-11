@@ -16,6 +16,8 @@ phases:
   build:
     commands:
       - echo building the project
+      - git config --global credential.helper store
+      - echo "https://waylandjeong:${GITHUB_PAT}@github.com" > $HOME/.git-credentials
       - git config --global user.email "wjeong@gmai.com"
       - git config --global user.name "Wayland Jeong"
       - git remote -v
