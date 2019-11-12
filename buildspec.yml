@@ -21,6 +21,7 @@ phases:
       - git config --global user.name "Wayland Jeong"
       - git remote -v
       - pandoc -s -o README.doc README.md
+      - git fsck
       - git add README.doc
       - git commit -m "Converted markdown to doc using pandoc"
       - git push -u origin master
