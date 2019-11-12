@@ -20,9 +20,8 @@ phases:
       - git config --global user.email "wjeong@gmai.com"
       - git config --global user.name "Wayland Jeong"
       - git remote -v
+      - git pull origin master
       - pandoc -s -o README.doc README.md
-      - git remote prune origin
-      - git fsck
       - git add README.doc
       - git commit -m "Converted markdown to doc using pandoc"
       - git push -u origin master
